@@ -11,7 +11,7 @@ c = a+b+c; //23+3+0
 b = a+b+c; //23+3+26
 console.log(a,b,c);//23 52 26
 //-------------------------------
-const birth = 20;
+// const birth = 20;
 // birth = 21; --> 상수값 변경에러
 console.log('----------------------');
 // 문제 1. 다음 회원의 정보를 변수로 처리하시오.
@@ -21,3 +21,14 @@ console.log('----------------------');
 // 주소 : 인천시 부평구
 // 혈액형 : A형
 // 위 값을 모두 변수로 개별대입 후 콘솔출력하기.
+let name = '홍길동'
+let age = 20;
+const birth = 12;
+let address = '인천시 부평구';
+const bloodType ='A형';
+console.log('이름 : '+name);
+console.log('나이 : '+age+'살');
+console.log('생일 : '+birth+'월');
+console.log('주소 : '+address);
+console.log('혈액형 : '+bloodType);
+console.log('-------------------')
