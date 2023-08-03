@@ -54,6 +54,31 @@
             </li>
         </ul>
         <button type="button" id="point_all_btn">전액사용</button>
+        <script>
+            const point_all_btn = document.querySelector('#point_all_btn')
+            const use_point = document.querySelector('#use_point')
+            const user_point = document.querySelector('#user_point')
+            const point_reset = document.querySelector('#point_reset')
+            console.log(point_all_btn,use_point,user_point,point_reset)
+            user_point.value = 1000;
+            point_reset.style.display = 'none'
+            // let point_have = Number(user_point.value)
+            // let point_use = Number(use_point.value)
+            // console.log(point_use,poin)
+            point_all_btn.addEventListener('click',function(){
+                use_point.value = user_point.value
+                user_point.value = user_point.value - use_point.value;
+                if(use_point.value>=1){
+                point_reset.style.display = 'inline-block'
+                }
+            })
+            point_reset.addEventListener('click',function(){
+                use_point.value = 0
+                if(use_point.value==='0'){
+                point_reset.style.display = 'none'
+            }
+            })
+        </script>
     </div>
 </body>
 </html>
