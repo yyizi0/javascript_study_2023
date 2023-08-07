@@ -55,47 +55,43 @@
         </ul>
         <button type="button" id="point_all_btn">전액사용</button>
         <script>
-            const point_all_btn = document.querySelector('#point_all_btn')
-            const use_point = document.querySelector('#use_point')
-            const user_point = document.querySelector('#user_point')
-            const point_reset = document.querySelector('#point_reset')
+            const point_all_btn = document.querySelector('#point_all_btn')//전액버튼
+            const use_point = document.querySelector('#use_point')//사용포인트
+            const user_point = document.querySelector('#user_point') //보유포인트
+            const point_reset = document.querySelector('#point_reset') //x버튼
             console.log(point_all_btn,use_point,user_point,point_reset)
             console.log(typeof(user_point.value))
 
             user_point.value = 1000;
-            let userPoint = Number(user_point.value)
+            point_reset.style.display = 'none'
+            /*let userPoint = Number(user_point.value)
             let pointUse = Number(use_point.value)
             console.log(userPoint,pointUse)
-            console.log(typeof(userPoint,pointUse))
+            console.log(typeof(userPoint,pointUse))*/
             
-            point_reset.style.display = 'none'
 
             point_all_btn.addEventListener('click',function(){
-                console.log(typeof(userPoint))
-                console.log(userPoint,pointUse)
-                if(userPoint>=1000){
-                    pointUse = userPoint
+                // console.log(typeof(userPoint))
+                // console.log(userPoint,pointUse)
+                if(user_point.value>=1000){
+                    use_point.value = user_point.value
+                    user_point.value = 0
+                    point_reset.style.display = 'inline-block'
+                    /*pointUse = userPoint
                     use_point.value = pointUse
                     userPoint = 0
-                    user_point.value = userPoint
+                    user_point.value = userPoint*/
                 }else {
-                    window.alert('1000원 이상 사용가능합니다.')
-                }
-
-                if(pointUse>=1){
-                point_reset.style.display = 'inline'
-                }else {
-                    point_reset.style.display = 'none'
+                    window.alert('1000원 이상 보유 시 사용가능합니다.')
                 }
             })
             point_reset.addEventListener('click',function(){
-                userPoint = pointUse
-                user_point.value = userPoint
-                pointUse = 0
-                use_point.value = pointUse
-                if(pointUse===0){
+                user_point.value = use_point.value
+                use_point.value = 0
                 point_reset.style.display = 'none'
-            }
+                /*user_point.value = userPoint
+                pointUse = 0
+                use_point.value = pointUse*/
             })
         </script>
     </div>
