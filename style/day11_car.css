@@ -25,6 +25,7 @@ main #video .tab_title a {
     width:120px; padding: 20px 0; 
     
 }
+/* 탭 제목 활성화 디자인 + js class 호출용 */
 main #video .tab_title a.active {border-bottom: 5px solid #25a8ff;}
 main #video .tab_contents {}
 main #video .tab_contents .active {}
@@ -51,6 +52,7 @@ main #menu .tab_title a {
     position:relative; bottom:-1px;
 }
 main #menu .tab_title a:last-child {margin-right: 0;}
+/* 탭 제목 활성화 디자인 + js class 호출용 */
 main #menu .tab_title a.active {
     border:1px solid #000;
     border-top: 5px solid #25a8ff;
